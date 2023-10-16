@@ -23,6 +23,7 @@ name = "Toonhex+"
 ; resources like desert, move/build cost like hill
 ; Ahills (Arctic hills) like hills, but hue+63, chroma -30 lightness+35
 ; Thills (Tundra hills) like hills, but hue -10, chroma -25, lightness -10
+; Fhills (Forest hills)
 
 priority = 3
 
@@ -184,6 +185,7 @@ files =
   "toonhex+/Dhills.spec",
   "toonhex+/Ahills.spec",
   "toonhex+/Thills.spec",
+  "toonhex+/Fhills.spec",
   "hexemplio/mountains.spec",
   "hexemplio/tiles.spec",
   "hexemplio/grid.spec",
@@ -291,6 +293,15 @@ layer2_match_with = "hills"
 
 [tile_Ahills]
 tag = "Ahills"
+blend_layer = 1
+num_layers = 3
+layer0_match_type = "lake"
+layer1_match_type = "land"
+layer2_match_type = "hills"
+layer2_match_with = "hills"
+
+[tile_Fhills]
+tag = "Fhills"
 blend_layer = 1
 num_layers = 3
 layer0_match_type = "lake"
