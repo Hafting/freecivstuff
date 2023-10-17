@@ -47,6 +47,7 @@ tiles = { "row", "column","tag"
   0,    2,  "t.l0.forest1"			;[PA]
   0,    3,  "t.l0.tundra1"			;[PA]
   0,    3,  "t.l0.Thills1"      ;[HH]
+  0,    3,  "t.l0.volcanoes1"   ;[HH]
   0,    4,  "t.l0.arctic1"			;[?]
   0,    4,  "t.l0.Ahills1"      ;[HH]
   0,    5,  "t.l0.swamp1"			;{PA}
@@ -62,6 +63,7 @@ tiles = { "row", "column","tag"
   5,    0,  "t.l1.Fhills1"
   5,    0,  "t.l1.Jhills1"
   5,    0,  "t.l1.mountains1"
+  5,    0,  "t.l1.volcanoes1"
   5,    0,  "t.l1.tundra1"
   5,    0,  "t.l1.arctic1"
   5,    0,  "t.l1.swamp1"

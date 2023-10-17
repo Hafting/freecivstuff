@@ -916,6 +916,52 @@ Land units that move into mountains can see an extra space, but a\
  move into mountains without a road.\
 ")
 
+[terrain_volcanoes]
+name                 = _("Volcanoes")
+graphic              = "volcanoes"
+graphic_alt          = "-"
+identifier           = "v"
+class                = "Land"
+movement_cost        = 3
+defense_bonus        = 100
+food                 = 0
+shield               = 2
+trade                = 2
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 0
+base_time            = 0
+road_time            = 0
+irrigation_result    = "no"
+irrigation_food_incr = 0
+irrigation_time      = 0
+mining_result        = "yes"
+mining_shield_incr   = 3
+mining_time          = 15
+transform_result     = "no"
+transform_time       = 36
+pillage_time         = 1
+clean_pollution_time = 3
+clean_fallout_time   = 3
+animal               = "None"
+warmer_wetter_result = "no"
+warmer_drier_result  = "no"
+cooler_wetter_result = "no"
+cooler_drier_result  = "no"
+native_to            = "Land", "Small Land", "Air", "Missile", "Helicopter"
+flags                = "NoCities"
+property_mountainous = 10
+color.r              = 12
+color.g              = 10
+color.b              = 10
+helptext             = _("\
+Volcanoes are regions of extreme altitude, making agriculture very difficult.\
+They bring unusual resources to the surface, which may be valuable.\
+Volcanoes are too unstable for roads.
+"), _("\
+Land units that move into mountains can see an extra space.\
+")
+
 [terrain_plains]
 name                 = _("Plains")
 graphic              = "plains"
