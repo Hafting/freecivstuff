@@ -11,9 +11,9 @@ name = "Toonhex+"
 ; D "desert hill"
 ; T "tundra hill"
 ; A "arctic hill"
-; not started yet
 ; F "forest hill"
 ; J "jungle hill"
+; not yet:
 ; v "volcano"
 ; Based on hexemplio, which in turn is based on
 ; amplio2hexgbig by GriffonSpade
@@ -24,6 +24,7 @@ name = "Toonhex+"
 ; Ahills (Arctic hills) like hills, but hue+63, chroma -30 lightness+35
 ; Thills (Tundra hills) like hills, but hue -10, chroma -25, lightness -10
 ; Fhills (Forest hills)
+; Jhills (Jungle hills)
 
 priority = 3
 
@@ -186,6 +187,7 @@ files =
   "toonhex+/Ahills.spec",
   "toonhex+/Thills.spec",
   "toonhex+/Fhills.spec",
+  "toonhex+/Jhills.spec",
   "hexemplio/mountains.spec",
   "hexemplio/tiles.spec",
   "hexemplio/grid.spec",
@@ -302,6 +304,15 @@ layer2_match_with = "hills"
 
 [tile_Fhills]
 tag = "Fhills"
+blend_layer = 1
+num_layers = 3
+layer0_match_type = "lake"
+layer1_match_type = "land"
+layer2_match_type = "hills"
+layer2_match_with = "hills"
+
+[tile_Jhills]
+tag = "Jhills"
 blend_layer = 1
 num_layers = 3
 layer0_match_type = "lake"
