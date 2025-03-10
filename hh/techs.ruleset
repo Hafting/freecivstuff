@@ -8,9 +8,9 @@
 ; use your new customized file.
 
 [datafile]
-description="Sandbox technology data for Freeciv"
-options="+Freeciv-3.0-ruleset"
-format_version=10
+description="Civ2Civ3 technology data for Freeciv"
+options="+Freeciv-3.1-ruleset web-compatible"
+format_version=20
 
 [control]
 ; Names for custom tech flags. There can be up to 8 of these.
@@ -47,7 +47,7 @@ format_version=10
 ; /* <-- avoid gettext warnings
 ;
 ; Below: The individual advances, one per section.
-; The number can be variable, up to 199.
+; The number can be variable, up to 250.
 ;
 ; The actual tag used (the * in [advance_*]) does not matter, except
 ; it must be unique within this file, and it may be used in debug
@@ -78,7 +78,7 @@ format_version=10
 ;                 tech requirements because it is a requirement vector.
 ;                 See doc/README.effects to learn more about requirement
 ;                 vectors.
-;                 Requireing a tech here in stead of in req1, req2 or
+;                 Requiring a tech here instead of in req1, req2 or
 ;                 root_req is not supported yet.
 ;                 Requirements that may become fulfilled during the game
 ;                 when they weren't at the start of the game is not
@@ -102,9 +102,10 @@ format_version=10
 ; possible:
 ;
 ; "Bonus_Tech"          = player gets extra tech if reached first
-; "Bridge"              = "Settler" unit types can build roads with
-;                         "RequiresBridge" flag over roads with
-;                         "PreventsOtherRoads" flag (rivers)
+; "Bridge"              = "Settler" unit types can build extras that
+;                         require bridge when occurring with some other
+;                         extra. See "bridged_over" extra property in
+;                         terrain.ruleset.
 ; "Build_Airborne"      = from now on can build air units (for use by AI)
 ; "Claim_Ocean"         = Player claims ocean tiles even if they are not
 ;                         adjacent to border source
@@ -120,8 +121,7 @@ req2     = "Machine Tools"
 flags    = ""
 graphic     = "a.advanced_flight"
 graphic_alt = "-"
-helptext = _("Enables movement of nuclear units."),
-           _("Enables airlift of medium weight units.")
+helptext = _("Enables movement of nuclear units.")
 
 [advance_alphabet]
 name     = _("Alphabet")
@@ -269,8 +269,8 @@ flags    = ""
 graphic     = "a.construction"
 graphic_alt = "-"
 helptext = _("\
-Allows Settlers, Migrants, Workers and Engineers to build forts and \
-fortresses.\
+Allows Settlers, Migrants, Workers, Engineers, and military infantry \
+units to build forts and fortresses.\
 ")
 
 [advance_currency]
@@ -307,8 +307,6 @@ graphic_alt = "-"
 helptext = _("\
 Allows irrigation without an adjacent water source, improves the \
 effect of Amphitheaters, and increases city vision radius.\
-"), _("\
-Grants you vision inside your borders.\
 ")
 
 [advance_electronics]
@@ -366,7 +364,6 @@ req2     = "Tactics"
 flags    = "Build_Airborne"
 graphic     = "a.flight"
 graphic_alt = "-"
-helptext = _("Enables airlift of light weight units.")
 
 [advance_fusion_power]
 name     = _("Fusion Power")
@@ -375,8 +372,7 @@ req2     = "Labor Union"
 flags    = ""
 graphic     = "a.fusion_power"
 graphic_alt = "-"
-helptext = _("Makes it possible for Engineers to transform terrains."),
-           _("Enables airlift of heavy weight units.")
+helptext = _("Makes it possible for Engineers to transform terrains.")
 
 [advance_genetic_engineering]
 name     = _("Genetic Engineering")
@@ -655,7 +651,8 @@ flags    = ""
 graphic     = "a.radio"
 graphic_alt = "-"
 helptext = _("\
-Allows Workers and Engineers to build airstrips, airbases and buoys.\
+Allows Settlers, Migrants, Workers and Engineers to build airstrips, \
+airbases and buoys. Allows Transports to build buoys.\
 ")
 
 [advance_railroad]
@@ -668,8 +665,6 @@ graphic_alt = "-"
 helptext = _("\
 Allows Settlers, Migrants, Workers and Engineers to upgrade roads to \
 railroads.\
-"), _("\
-Halves one-time revenue from new trade routes.\
 "), _("\
 For Despotism or Tribal governments, cancels the penalty to worked \
 tiles with output greater than 2 (as if all your cities were always \

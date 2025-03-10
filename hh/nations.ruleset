@@ -8,9 +8,9 @@
 ; use your new customized file.
 
 [datafile]
-description="Sandbox nations data for Freeciv"
-options="+Freeciv-3.0-ruleset"
-format_version=10
+description="Default nations data for Freeciv"
+options="+Freeciv-3.1-ruleset web-compatible"
+format_version=20
 
 ; This section contains meta information for freeciv-ruledit and freeciv-ruleup
 ; to recreate the ruleset file in a form wanted.
@@ -23,7 +23,7 @@ nationlist = "default/nationlist.ruleset"
 
 ; List of nations to embed to main nations.ruleset despite separate nationlist
 ; being used for other nations.
-embedded_nations = "Barbarian"
+embedded_nations = "Barbarian", "Pirate"
 
 [compatibility]
 ; Initial government for all the nations that do not
@@ -56,7 +56,13 @@ aggressive_min = 30
 aggressive_max = 90
 aggressive_default = 50
 
+; Value of trait "builder" defines how much AI wants to build buildings
+builder_min = 30
+builder_max = 90
+builder_default = 50
+
 ; Please keep [ruledit] section in sync with these includes
 *include "default/nationlist.ruleset"
-; This ruleset uses model of single barbarian nation
-*include "nation/singlebarbarian.ruleset"
+; This ruleset uses model of two separate barbarian nations
+*include "nation/barbarian.ruleset"
+*include "nation/pirate.ruleset"

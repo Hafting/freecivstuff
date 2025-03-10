@@ -11,9 +11,9 @@
 ; than minor changes.
 
 [datafile]
-description="Sandbox buildings data for Freeciv"
-options="+Freeciv-3.0-ruleset"
-format_version=10
+description="Civ2Civ3 buildings data for Freeciv"
+options="+Freeciv-3.1-ruleset web-compatible"
+format_version=20
 
 ; /* <-- avoid gettext warnings
 ;
@@ -42,6 +42,8 @@ format_version=10
 ; build_cost	= production shields required to build
 ; upkeep	= monetary upkeep value
 ; sabotage	= percent chance of diplomat sabotage being successful
+; sound         = tag of the sound to play when building finished
+; sound_alt     = alternate sound tag
 ; flags         = special flag strings
 ;
 ; ** Building flags **
@@ -84,14 +86,11 @@ Allows a city to produce veteran air units (including helicopters and\
  Also, damaged air units (again, including helicopters) which stay in\
  town for one full turn without moving are completely restored.\
 "), _("\
-A city with an Airport can airlift an extra unit per turn. Airlifting\
- instantly transports the unit from one city\
+Two cities with Airports can airlift one unit per turn (including\
+ aircraft). Airlifting instantly transports the unit from one city\
  to another and will use all of the unit's movement points. A unit\
  must have some movement points left to be airlifted, and cannot\
  carry cargo.\
-"), _("\
-Two cities with Airports can airlift medium and heavy weight units once\
- Advanced Flight and Fusion Power are discovered.\
 ")
 
 [building_aqueduct]
@@ -251,7 +250,7 @@ sound		= "b_barracks_i"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new military land unit built in a city will\
  automatically have Veteran status, which means that its attack and\
  defense strengths are increased by 50%.\
 "), _("\
@@ -280,7 +279,7 @@ sound		= "b_barracks_ii"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new military land unit built in a city will\
  automatically have Veteran status, which means that its attack and\
  defense strengths are increased by 50%.\
 "), _("\
@@ -307,7 +306,7 @@ sound		= "b_barracks_iii"
 sound_alt	= "b_generic"
 ; /* xgettext:no-c-format */
 helptext	= _("\
-With a Barracks, each new land unit built in a city will\
+With a Barracks, each new military land unit built in a city will\
  automatically have Veteran status, which means that its attack and\
  defense strengths are increased by 50%.\
 "), _("\
@@ -443,8 +442,9 @@ eliminated. A Granary together with a Courthouse in a city will \
 eliminate food waste.\
 "), _("\
 Also makes one unhappy citizen content (unless that citizen is unhappy \
-about military activity), and makes the revolt cost of the city 4 times \
-bigger.\
+about military activity).\
+"), _("\
+A city with a Courthouse cannot be incited to revolt.\
 ")
 
 [building_factory]
@@ -807,7 +807,7 @@ sabotage	= 0
 sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
-Makes a city the ecclesiastical capital, that acts as a secondary center \
+Makes a city the ecclesiastical capital, that acts as a second center \
 of government.\
 "), _("\
 Waste in other cities (corruption, production waste, and food waste) \
@@ -824,9 +824,6 @@ stationed in the city, or sabotage your buildings.\
 _("\
 Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
-"),
-_("\
-The city has no other benefits of the primary capital.\
 ")
 
 [building_police_station]
@@ -2087,13 +2084,13 @@ sabotage	= 0
 ; FIXME: this is the real helptext; restore when have a subordnate analogue
 ; /* (ignore for gettext until fixed)
 ;helptext	= _("\
-;This is not a normal improvement.  Instead, setting a city's\
+;This is not a normal improvement. Instead, setting a city's\
 ; production to Capitalization means its shield production is\
 ; converted to tax output (money).\
 ;")
 ; */
 helptext	= _("\
-This is not a normal improvement.  Instead, setting a city's\
+This is not a normal improvement. Instead, setting a city's\
  production to Coinage means its shield production is\
  converted to tax output (money, coins!).\
 ")

@@ -2,7 +2,7 @@
 [spec]
 
 ; Format and options of this spec file:
-options = "+Freeciv-3.0-spec"
+options = "+Freeciv-3.1-spec"
 
 [info]
 
@@ -11,14 +11,15 @@ artists = "
     Andreas Røsdal <andrearo@pvv.ntnu.no> (hex mode)
     Daniel Speyer <dspeyer@users.sf.net> [DS]
     Architetto Francesco [http://www.public-domain-photos.com/] [AF]
-	Peter Arbor <peter.arbor@gmail.com> [PA]
-	GriffonSpade [GS]
-	Unknown Battle For Wesnoth artists [BFW]
-	Unknown Compass Artist [CA]
-	Unknown Opengameart.org Artist(s)
-	Unknown FreeCol Artist(s)
-	Vegard Stolpnessaeter [VS]
-	Helge Hafting [HH]
+    Peter Arbor <peter.arbor@gmail.com> [PA]
+    GriffonSpade [GS]
+    Unknown Battle For Wesnoth artists [BFW]
+    Unknown Compass Artist [CA]
+    Unknown Opengameart.org Artist(s)
+    Unknown FreeCol Artist(s)
+    Vegard Stolpnessaeter [VS]
+    Canik
+    Helge Hafting <helge.hafting@ntebb.no> [HH]
 "
 
 [file]
@@ -36,9 +37,9 @@ tiles = { "row", "column","tag"
 
 ; terrain - layer 0
   0,    0,  "t.l0.desert1"			;[?]
-  0,    0,  "t.l0.Dhills1"      ;[HH]
-  0,    1,  "t.l0.plains1"			;[PA]
-  0,    1,  "t.l0.hills1"       ;[PA]
+  0,    1,  "t.l0.plains1", "t.l0.savannah1"	;[PA]
+  0,    1,  "t.l0.hills1"			;[PA]
+  0,    0,  "t.l0.Dhills1"      ;[HH]  
   0,    1,  "t.l0.mountains1"		;[PA]
   0,    1,  "t.l0.Fhills1"      ;[HH]
   0,    1,  "t.l0.Jhills1"      ;[HH]
@@ -51,7 +52,6 @@ tiles = { "row", "column","tag"
   0,    4,  "t.l0.arctic1"			;[?]
   0,    4,  "t.l0.Ahills1"      ;[HH]
   0,    5,  "t.l0.swamp1"			;{PA}
-
   0,    7,  "t.l0.coast1"			;[PA][GS]
   5,    6,  "t.l0.inaccessible1"	;[?][GS]
 
@@ -131,10 +131,11 @@ tiles = { "row", "column","tag"
  5, 0, "t.blend.floor"
  5, 0, "t.blend.lake"
  0, 4, "t.blend.arctic"										;[?]
- 5, 3, "user.attention"										;[GS]
+ 5, 3, "user.attention"                                                                         ;[GS]
  5, 4, "tx.fog"
 ; 5, 6, "t.l0.charcoal1"									;[?]
 ; 5, 7, "t.l0.compass1"										;[CA][PA]
+ 5, 8, "user.infratile"
 
 ;goto path
  6, 0, "path.step"            ; turn boundary within path
