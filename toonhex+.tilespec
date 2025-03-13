@@ -2,21 +2,19 @@
 [tilespec]
 
 ; Format and options of this tilespec file:
-options = "+Freeciv-3.0-tilespec"
+options = "+Freeciv-3.1-tilespec"
 
 ; A simple name for the tileset specified by this file:
 name = "Toonhex+"
-; Based on Toonhex, but with these extra terrain types:
-; in progress:
-; D "desert hill"
-; T "tundra hill"
-; A "arctic hill"
-; F "forest hill"
+; Based on Toonhex, with these extra terrain types:
+; D "Desert hill"
+; T "Tundra hill"
+; A "Arctic hill"
+; F "Forested hill"
 ; J "jungle hill"
 ; v "volcano"
-; Based on hexemplio, which in turn is based on
+; Toonhex based on hexemplio, which in turn is based on
 ; amplio2hexgbig by GriffonSpade
-
 
 ; Dhills (Desert hills) like hills, but hue -28, chroma -15. lightness +5
 ; resources like desert, move/build cost like hill
@@ -33,7 +31,7 @@ priority = 3
 
 ; Summary and full description of the tileset.
 summary = _("Large iso-hex tileset combining Hexemplio's terrains \
-and Cimpletoon's units with orientation.")
+and Cimpletoon's units with orientation, and extra hill types")
 ;description = ""
 
 ; TODO: add more overall information fields on tiles, 
@@ -80,6 +78,10 @@ activity_offset_y = 28
 ; offset of the selected unit sprites
 select_offset_x = 0
 select_offset_y = 21
+
+; offset of the unit stack size number sprites
+stack_size_offset_x = 32
+stack_size_offset_y = 25
 
 ; offset the cities by this amount
 city_offset_x = 17
@@ -146,7 +148,8 @@ layer_order =
   "FocusUnit",  ; The focused unit(s).
   "Goto",       ; Goto turn count and intermediate points, *not* goto lines.
   "WorkerTask", ; The unit task indicators ("G", "S", ...).
-  "Editor"      ; Editor stuff (selected tile and start points).
+  "Editor",     ; Editor stuff (selected tile and start points).
+  "InfraWork"   ; Icons for the extras being placed.
 
 ; This is special because it gets freed and reloaded as required:
 main_intro_file    = "misc/intro"
@@ -179,7 +182,9 @@ files =
   "hexemplio/activities.spec",
   "hexemplio/bases.spec",
   "hexemplio/cities.spec",
+;  "hexemplio/terrain.spec",
   "toonhex+/terrain.spec",
+  "hexemplio/savannah.spec",
   "hexemplio/embellishments.spec",
   "hexemplio/forests.spec",
   "hexemplio/hills.spec",
@@ -188,7 +193,7 @@ files =
   "toonhex+/Thills.spec",
   "toonhex+/Fhills.spec",
   "toonhex+/Jhills.spec",
-  "toonhex+/volcanoes.spec",
+  "toonhex+/volcanoes.spec",  
   "hexemplio/mountains.spec",
   "hexemplio/tiles.spec",
   "hexemplio/grid.spec",
@@ -201,7 +206,29 @@ files =
   "hexemplio/select.spec",
   "hexemplio/water1.spec",
   "hexemplio/water2.spec",
-  "hexemplio/water3.spec"
+  "hexemplio/water3.spec",
+  ; Add XYZ and Elefant units
+  "cimpletoon/units/abrams/xxx.spec",
+  "cimpletoon/units/assultgun/xxx.spec",
+  "cimpletoon/units/biplane/xxx.spec",
+  "cimpletoon/units/container_ship/xxx.spec",
+  "cimpletoon/units/flak88/xxx.spec",
+  "cimpletoon/units/icebreaker/xxx.spec",
+  "cimpletoon/units/light_howitzer/xxx.spec",
+  "cimpletoon/units/locomotive/xxx.spec",
+  "cimpletoon/units/m4_sherman/xxx.spec",
+  "cimpletoon/units/mig15/xxx.spec",
+  "cimpletoon/units/missile_sub/xxx.spec",
+  "cimpletoon/units/panther/xxx.spec",
+  "cimpletoon/units/panzer_iii/xxx.spec",
+  "cimpletoon/units/pt-boat/xxx.spec",
+  "cimpletoon/units/ROMB/xxx.spec",
+  "cimpletoon/units/stationary_sam/xxx.spec",
+  "cimpletoon/units/steamer/xxx.spec",
+  "cimpletoon/units/technical/xxx.spec",
+  "cimpletoon/units/tiger/xxx.spec",
+  "cimpletoon/units/truck/xxx.spec",
+  "cimpletoon/units/zeppelin/xxx.spec"
 
 
 ; Include color definitions
@@ -348,6 +375,15 @@ layer2_match_with = "hills"
 
 [tile_jungle]
 tag = "jungle"
+blend_layer = 1
+num_layers = 3
+layer0_match_type = "lake"
+layer1_match_type = "land"
+layer2_match_type = "foliage"
+layer2_match_with = "foliage"
+
+[tile_savannah]
+tag = "savannah"
 blend_layer = 1
 num_layers = 3
 layer0_match_type = "lake"
