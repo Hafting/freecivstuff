@@ -393,6 +393,16 @@ reqs    =
       "UnitClassFlag", "Ground",    "Local"
     }
 
+; Vision benefit from volcanoes (All Ground unit, same as for mountains)
+[effect_volcanoes_vision]
+type    = "Unit_Vision_Radius_Sq"
+value   = 4
+reqs    =
+    { "type",          "name",      "range"
+      "Terrain",       "Volcanoes", "Local"
+      "UnitClassFlag", "Ground",    "Local"
+    }
+
 ; Movement penalty if ended turn at mountains (All Ground units)
 [effect_mountains_movement]
 type    = "Move_Bonus"
@@ -400,6 +410,18 @@ value   = -1
 reqs    =
     { "type",          "name",      "range", "present"
       "Terrain",       "Mountains", "Local", TRUE
+      "UnitClassFlag", "Ground",    "Local", TRUE
+      "Extra",         "Road",      "Local", FALSE
+      "Extra",         "River",     "Local", FALSE
+    }
+
+; Movement penalty if ended turn at mountains (All Ground units, same as for mountains)
+[effect_volcanoes_movement]
+type    = "Move_Bonus"
+value   = -1
+reqs    =
+    { "type",          "name",      "range", "present"
+			"Terrain",       "Volcanoes", "Local", TRUE
       "UnitClassFlag", "Ground",    "Local", TRUE
       "Extra",         "Road",      "Local", FALSE
       "Extra",         "River",     "Local", FALSE
