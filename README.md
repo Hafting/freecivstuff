@@ -1,5 +1,6 @@
 # freecivstuff
 Tileset &amp; ruleset for freeciv
+![alt text](freecivstuff.png "Freeciv ")
 
 This repository is for playing freeciv with more terrain types. Such as "arctic hills" and "desert hills".  This gives more opportunities for nice looking terrains, as it is now possible to have a hill in a desert or polar region - without getting an unrealistic green hill there. A green hill is not merely a bad fit visually, it also ruins the gameplay by providing too nice terrain in an otherwise barren region. 
 
