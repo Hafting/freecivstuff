@@ -1,15 +1,15 @@
 =================================
-hh ruleset, based sed on iv2Civ3 Ruleset for Freeciv v3.1
+hh ruleset, based on Civ2Civ3 Ruleset for Freeciv v3.1
 =================================
-This ruleset is made for using extra terrrain types;
-arctic hills, forested hills, jungle hills, tundra hills, desert 
-hills and volcanoes.  The extra hill types allow more realistic 
+This ruleset is made for using extra terrrain types:
+Savanna, arctic hills, forested hills, jungle hills, tundra hills,
+desert hills and volcanoes.  The extra hill types allow more realistic
 maps. A long hill don't need to end merely because it runs into a
 desert or glacier area.  The volcanoes look nice, and
 present a difficulty by not allowing roads.
 
 Except for extra terrain, these rules are a copy of civ2civ3.
-Remaining text from README.civ2civ3 desfribes the game:
+Remaining text from README.civ2civ3 describes the game:
 
 OBJECTIVES:
 -----------
