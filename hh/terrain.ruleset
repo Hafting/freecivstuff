@@ -11,7 +11,7 @@
 ; than minor changes.
 
 [datafile]
-description="Civ2Civ3 tile_type data for Freeciv"
+description="Civ2Civ3/HH tile_type data for Freeciv"
 options="+Freeciv-3.1-ruleset web-compatible"
 format_version=20
 
@@ -2191,6 +2191,43 @@ Cities built on or next to rivers incur a small risk of flooding,\
  which will destroy stored food.\
 ")
 
+[extra_bigriver]
+name           = _("Big river")
+category       = "Natural"
+causes         = "Road"
+;rmcauses       = ""
+;graphic fails - why?
+graphich       = "road.bigriver"
+graphic_alt    = "road.river"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+buildable      = FALSE
+native_to      = "Sea", "Land", "Small Land", "Merchant", "Trireme"
+defense_bonus  = 25
+flags          = "NativeTile", "IrrigationSource", "AllowsFarmlandOnDesert"
+; /* xgettext:no-c-format */
+helptext       = _("\
+Any land terrain type may have a Big river on it. A Big river adds 1\
+ trade to the resources produced by that tile. It also increases a\
+ tile's defense factor by 25%.\
+"), _("\
+Land units may move along big rivers for faster travel.\
+ Surface ships may travel on Big rivers.\
+"), _("\
+Roads and railroads can only be built on River tiles if your\
+ civilization has learned Bridge Building technology. Fortresses and\
+ Airbases cannot be built on Big river tiles.\
+"), _("\
+Cities built on or next to big rivers incur a small risk of flooding,\
+ which will destroy stored food.\
+")
+
+
+
+
 [extra_gold]
 name           = _("Gold")
 category       = "Resource"
@@ -2602,3 +2639,13 @@ trade_incr_const = 1
 compat_special = "River"
 flags          = "River"
 gui_type       = "Other"
+
+[road_bigriver]
+extra          = "Big river"
+move_cost      = 2
+move_mode      = "Cardinal"
+trade_incr_const = 2
+;compat_special = "River"
+flags          = "River"
+gui_type       = "Other"
+
