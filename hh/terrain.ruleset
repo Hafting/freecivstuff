@@ -2067,7 +2067,7 @@ build_time     = 0
 removal_time   = 0
 native_to      = "Land", "Small Land", "Big Land", "Merchant"
 hidden_by      = "Railroad", "Maglev"
-bridged_over   = "River"
+bridged_over   = "River", "Big river"
 flags          = "NativeTile", "AlwaysOnCityCenter"
 helptext       = _("\
 Roads allow your land units to move more quickly, and allow wheeled\
@@ -2105,7 +2105,7 @@ removal_time   = 0
 native_to      = "Land", "Small Land", "Big Land", "Merchant"
 flags          = "NativeTile", "AutoOnCityCenter"
 hidden_by      = "Maglev"
-bridged_over   = "River"
+bridged_over   = "River", "Big river"
 helptext       = _("\
 Once you learn the Railroad technology, you may upgrade your roads\
  to railroads. Units travel considerably faster along railroads than\
@@ -2143,7 +2143,7 @@ build_time     = 3
 removal_time   = 0
 native_to      = "Land", "Small Land"
 flags          = "NativeTile", "AutoOnCityCenter"
-bridged_over   = "River"
+bridged_over   = "River", "Big river"
 helptext       = _("\
 With sufficient technology, you may build magnetic levitation systems\
  along your railroad routes. Land and Small Land units expend no\
@@ -2173,6 +2173,7 @@ rmact_gfx_alt  = "-"
 buildable      = FALSE
 native_to      = "Land", "Small Land", "Merchant", "Trireme"
 defense_bonus  = 25
+hidden_by      = "Big river"
 flags          = "NativeTile", "IrrigationSource", "AllowsFarmlandOnDesert"
 ; /* xgettext:no-c-format */
 helptext       = _("\
@@ -2196,8 +2197,7 @@ name           = _("Big river")
 category       = "Natural"
 causes         = "Road"
 ;rmcauses       = ""
-;graphic fails - why?
-graphich       = "road.bigriver"
+graphic        = "road.bigriver"
 graphic_alt    = "road.river"
 activity_gfx   = "None"
 act_gfx_alt    = "-"
@@ -2210,7 +2210,7 @@ defense_bonus  = 25
 flags          = "NativeTile", "IrrigationSource", "AllowsFarmlandOnDesert"
 ; /* xgettext:no-c-format */
 helptext       = _("\
-Any land terrain type may have a Big river on it. A Big river adds 1\
+Any land terrain type may have a Big river on it. A Big river adds 2\
  trade to the resources produced by that tile. It also increases a\
  tile's defense factor by 25%.\
 "), _("\
@@ -2639,13 +2639,25 @@ trade_incr_const = 1
 compat_special = "River"
 flags          = "River"
 gui_type       = "Other"
+integrates     = "Big river"
+
+
+;integrates: big rivers and small rivers connect when adjacent. Easy!
+;problem: small rivers connect to a big river, but the part of the small
+;river connection which is on the big river tile, will be big-sized. 
+;might look odd, esp. if the big river is MUCH wider
+
+;not integrating: connection only on a tile where both is present. May
+;result in nicer connection of small rivers into a big one.
+;allows a small river next to a big one, without connection.
+;unfortunately, useless.  A small river widening into a big one, gets overlapping endpoints!
 
 [road_bigriver]
 extra          = "Big river"
 move_cost      = 2
 move_mode      = "Cardinal"
 trade_incr_const = 2
-;compat_special = "River"
+integrates     = "River"
 flags          = "River"
 gui_type       = "Other"
 
