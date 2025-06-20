@@ -2642,16 +2642,6 @@ gui_type       = "Other"
 integrates     = "Big river"
 
 
-;integrates: big rivers and small rivers connect when adjacent. Easy!
-;problem: small rivers connect to a big river, but the part of the small
-;river connection which is on the big river tile, will be big-sized. 
-;might look odd, esp. if the big river is MUCH wider
-
-;not integrating: connection only on a tile where both is present. May
-;result in nicer connection of small rivers into a big one.
-;allows a small river next to a big one, without connection.
-;unfortunately, useless.  A small river widening into a big one, gets overlapping endpoints!
-
 [road_bigriver]
 extra          = "Big river"
 move_cost      = 2
