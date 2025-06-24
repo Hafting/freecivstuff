@@ -22,7 +22,16 @@ Either way, start a game and choose the "hh" ruleset. You will get these extra t
 - forest hills
 - jungle hills
 - volcanoes
+- big rivers
+
+## Hills and volcanoes
 
 The various hills are much like their flat land counterparts, but they can be mined like any other hill, and have move cost like a hill. Arctic, desert and tundra hills are barren. The forest hill have shield bonus like a forest, and more if mined. Hill graphics are based on the toonhex hill, with the color changed or some trees added.
 
 The volcanoes are blackened mountains, some with lava flows.  Volcanoes do not support roads, impeding transport.  Like mountains, they produce no food. But they can be worked and mined for the unusual stuff they bring to the surface.
+
+## Rivers, big and small
+
+The well-known freeciv river, is the "small" river.  Small rivers admit triremes, but not the bigger ships.
+
+Big rivers are visually bigger. These rivers allow all ships, making some lakes and inland cities reachable by ship. 
