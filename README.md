@@ -32,6 +32,7 @@ The volcanoes are blackened mountains, some with lava flows.  Volcanoes do not s
 
 ## Rivers, big and small
 ![Big and small rivers](img/largeriver.png)
+	
 The big lake has a big river to the sea. The big river has a couple of small side rivers. There are also some other small rivers.
 
 The well-known freeciv river, is the "small" river.  Small rivers admit triremes, but not the bigger ships.
