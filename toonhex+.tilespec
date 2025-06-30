@@ -199,6 +199,8 @@ files =
   "hexemplio/grid.spec",
   "hexemplio/rivers.spec",
   "toonhex+/bigrivers.spec",
+	"toonhex+/ice.spec",
+	"toonhex+/ice.spec",
   "hexemplio/roads.spec",
   "hexemplio/roads-rails.spec",
   "hexemplio/roads-maglevs.spec",
@@ -440,6 +442,7 @@ styles =
       "road.pave",     "RoadAllSeparate"
       "road.river",    "River"
       "road.bigriver", "River"
+			"road.ice",      "RoadAllSeparate"
       "tx.irrigation", "River"
       "tx.farmland",   "River"
       "tx.mine",       "Single1"

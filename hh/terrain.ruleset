@@ -318,7 +318,7 @@ road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 1
-road_time            = 0
+road_time            = 2
 cultivate_result     = "no"
 cultivate_time       = 0
 plant_result         = "no"
@@ -2225,7 +2225,36 @@ Cities built on or next to big rivers incur a small risk of flooding,\
  which will destroy stored food.\
 ")
 
+;Ice is implemnented as a "road", as that allows variety with very few sprites!
+;Meant for sea ice, but should work on land too. 
+[extra_ice]
+name           = _("Ice")
+;ice is Natural. Tried Nuisance, didn't allow placing it on water
+category       = "Natural"
+;causes Road
+causes         = "Road"
+;rmcauses       = ""
+graphic        = "road.ice"
+graphic_alt    = "-"
+activity_gfx   = "None"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+;reqs from "ruins", modified to Oceanic instead of Land
+;this prevents the editor from placing ice on land. But does not allow it at sea?
+reqs           =
+    { "type", "name", "range", "present", "quiet"
+      "TerrainClass", "Oceanic", "Local", TRUE, FALSE
+    }
 
+buildable      = FALSE
+;native_to      = "Sea", "Land", "Small Land", "Merchant", "Trireme"
+defense_bonus  = 25
+; /* xgettext:no-c-format */
+helptext       = _("\
+Ice form in cold places, near the poles. Ships move slower in ice.\
+")
 
 
 [extra_gold]
@@ -2649,5 +2678,14 @@ move_mode      = "Cardinal"
 trade_incr_const = 2
 integrates     = "River"
 flags          = "River"
+gui_type       = "Other"
+
+[road_ice]
+extra          = "Ice"
+;Ice is a movement disadvantage, so a bad "road"
+;Ice is not nice for food/trade either.
+move_cost      = 9
+trade_incr_const = -1
+food_incr_const = -1
 gui_type       = "Other"
 
