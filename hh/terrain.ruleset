@@ -2229,7 +2229,6 @@ Cities built on or next to big rivers incur a small risk of flooding,\
 ;Meant for sea ice, but should work on land too. 
 [extra_ice]
 name           = _("Ice")
-;ice is Natural. Tried Nuisance, didn't allow placing it on water
 category       = "Natural"
 ;causes Road
 causes         = "Road"
@@ -2241,16 +2240,15 @@ act_gfx_alt    = "-"
 act_gfx_alt2   = "-"
 rmact_gfx      = "None"
 rmact_gfx_alt  = "-"
-;reqs from "ruins", modified to Oceanic instead of Land
-;this prevents the editor from placing ice on land. But does not allow it at sea?
 reqs           =
     { "type", "name", "range", "present", "quiet"
       "TerrainClass", "Oceanic", "Local", TRUE, FALSE
     }
 
 buildable      = FALSE
-;native_to      = "Sea", "Land", "Small Land", "Merchant", "Trireme"
+native_to      = "Sea", "Trireme"
 defense_bonus  = 25
+flags          = "NativeTile", "ConnectLand"
 ; /* xgettext:no-c-format */
 helptext       = _("\
 Ice form in cold places, near the poles. Ships move slower in ice.\
@@ -2684,7 +2682,7 @@ gui_type       = "Other"
 extra          = "Ice"
 ;Ice is a movement disadvantage, so a bad "road"
 ;Ice is not nice for food/trade either.
-move_cost      = 9
+move_cost      = 18
 trade_incr_const = -1
 food_incr_const = -1
 gui_type       = "Other"
