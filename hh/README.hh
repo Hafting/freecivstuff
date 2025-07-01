@@ -8,6 +8,9 @@ maps. A long hill don't need to end merely because it runs into a
 desert or glacier area.  The volcanoes look nice, and
 present a difficulty by not allowing roads.
 
+The terrain may have big rivers. Unlike normal rivers, the big rivers
+lets ships move on them.
+
 Except for extra terrain, these rules are a copy of civ2civ3.
 Remaining text from README.civ2civ3 describes the game:
 
@@ -949,3 +952,17 @@ To every people who collaborated to create this wonderful Freeciv game.
 Specially to those who programmed the Ruleset modding capabilities and
 the AI capable to play with them.
 Original developer David Fernandez (Bardo).
+
+
+Files changed from civ2civ3:
+buildings.ruleset    identical
+cities.ruleset       identical
+effects.ruleset      volcanoes get mountain-like vision and movement
+game.ruleset         identical
+governments.ruleset  identical
+nations.ruleset      identical
+*.lua                identical
+styles.ruleset       identical
+techs.ruleset        identical
+terrain.ruleset      new terrain tiles, big rivers, pack ice. Needs a tileset (toonhex+) too
+units.ruleset        identical
