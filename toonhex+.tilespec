@@ -212,6 +212,7 @@ files =
 	"toonhex+/icewater1.spec",
 	"toonhex+/icewater2.spec",
 	"toonhex+/icewater3.spec",
+	"toonhex+/packice.spec",
   ; Add XYZ and Elefant units
   "cimpletoon/units/abrams/xxx.spec",
   "cimpletoon/units/assultgun/xxx.spec",
@@ -248,7 +249,7 @@ match_types = "floor", "coast", "lake"
 match_types = "water", "land"
 
 [layer2]
-match_types = "hills", "foliage"
+match_types = "hills", "foliage", "ice"
 
 ; Water graphics referenced by terrain.ruleset
 ;
@@ -276,11 +277,15 @@ layer1_sprite_type = "corner"
 [tile_icecoast]
 tag = "icecoast"
 blend_layer = 2
-num_layers = 2
+num_layers = 3
 layer0_match_type = "coast"
+;hex_corner doesn't work:
+;layer2_sprite_type = "hex_corner"
 layer1_match_type = "water"
 layer1_match_with = "water"
 layer1_sprite_type = "corner"
+layer2_match_type = "ice"
+layer2_match_with = "ice"
 
 [tile_floor]
 tag = "floor"
@@ -306,9 +311,11 @@ layer1_match_type = "land"
 [tile_arctic]
 tag = "arctic"
 blend_layer = 0
-num_layers = 2
+num_layers = 3
 layer0_match_type = "lake"
 layer1_match_type = "water"
+;strangely, this does not match with icecoast:
+layer2_match_type = "ice"
 
 [tile_desert]
 tag = "desert"
