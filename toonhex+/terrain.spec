@@ -53,6 +53,7 @@ tiles = { "row", "column","tag"
   0,    4,  "t.l0.Ahills1"      ;[HH]
   0,    5,  "t.l0.swamp1"			;{PA}
   0,    7,  "t.l0.coast1"			;[PA][GS]
+	0,    7,  "t.l0.icecoast1"  ;[HH]
   5,    6,  "t.l0.inaccessible1"	;[?][GS]
 
 ; terrain - layer 1
@@ -127,6 +128,7 @@ tiles = { "row", "column","tag"
  0, 0, "t.lake_color"										;[?]
 ; 0, 0, "t.inaccessible_water_color"						;[?]
  5, 0, "t.blend.coast"
+ 5, 0, "t.blend.icecoast"
  5, 0, "t.blend.ocean"
  5, 0, "t.blend.floor"
  5, 0, "t.blend.lake"

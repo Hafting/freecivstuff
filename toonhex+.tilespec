@@ -200,7 +200,6 @@ files =
   "hexemplio/rivers.spec",
   "toonhex+/bigrivers.spec",
 	"toonhex+/ice.spec",
-	"toonhex+/ice.spec",
   "hexemplio/roads.spec",
   "hexemplio/roads-rails.spec",
   "hexemplio/roads-maglevs.spec",
@@ -210,6 +209,9 @@ files =
   "hexemplio/water1.spec",
   "hexemplio/water2.spec",
   "hexemplio/water3.spec",
+	"toonhex+/icewater1.spec",
+	"toonhex+/icewater2.spec",
+	"toonhex+/icewater3.spec",
   ; Add XYZ and Elefant units
   "cimpletoon/units/abrams/xxx.spec",
   "cimpletoon/units/assultgun/xxx.spec",
@@ -264,6 +266,15 @@ layer1_sprite_type = "corner"
 
 [tile_coast]
 tag = "coast"
+blend_layer = 2
+num_layers = 2
+layer0_match_type = "coast"
+layer1_match_type = "water"
+layer1_match_with = "water"
+layer1_sprite_type = "corner"
+
+[tile_icecoast]
+tag = "icecoast"
 blend_layer = 2
 num_layers = 2
 layer0_match_type = "coast"

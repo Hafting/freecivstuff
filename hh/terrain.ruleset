@@ -304,7 +304,7 @@ Lakes are substantial bodies of fresh water.\
 
 [terrain_icy_ocean]
 name                 = _("Icy ocean")
-graphic              = "coast"
+graphic              = "icecoast"
 graphic_alt          = "-"
 identifier           = "_"
 class                = "Oceanic"
