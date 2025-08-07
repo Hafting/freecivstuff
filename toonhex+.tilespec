@@ -314,7 +314,6 @@ blend_layer = 0
 num_layers = 3
 layer0_match_type = "lake"
 layer1_match_type = "water"
-;strangely, this does not match with icecoast:
 layer2_match_type = "ice"
 
 [tile_desert]
