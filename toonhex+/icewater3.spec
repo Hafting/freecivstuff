@@ -2,7 +2,7 @@
 [spec]
 
 ; Format and options of this spec file:
-options = "+Freeciv-3.1-spec"
+options = "+Freeciv-3.2-spec"
 
 [info]
 
@@ -12,6 +12,8 @@ artists = "
 "
 
 [file]
+;We aren't using anything ice specific, should revert to hexemplio/water3 here.
+;No need to carry the extra .png ...
 gfx = "toonhex+/icewater3"
 
 [grid_main]

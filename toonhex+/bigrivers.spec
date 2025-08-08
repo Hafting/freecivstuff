@@ -2,7 +2,7 @@
 [spec]
 
 ; Format and options of this spec file:
-options = "+Freeciv-3.1-spec"
+options = "+Freeciv-3.2-spec"
 
 [info]
 
@@ -103,23 +103,5 @@ tiles = { "row", "column","tag"
  8, 3, "road.bigriver_outlet_w"
  8, 4, "road.bigriver_outlet_nw"
  8, 5, "road.bigriver_outlet_se"
-
-;irrigation outlets
-
- 8, 0, "tx.irrigation_outlet_n"
- 8, 1, "tx.irrigation_outlet_e"
- 8, 2, "tx.irrigation_outlet_s"
- 8, 3, "tx.irrigation_outlet_w"
- 8, 4, "tx.irrigation_outlet_nw"
- 8, 5, "tx.irrigation_outlet_se"
-
-;farmland outlets
-
- 8, 0, "tx.farmland_outlet_n"
- 8, 1, "tx.farmland_outlet_e"
- 8, 2, "tx.farmland_outlet_s"
- 8, 3, "tx.farmland_outlet_w"
- 8, 4, "tx.farmland_outlet_nw"
- 8, 5, "tx.farmland_outlet_se"
 
 }

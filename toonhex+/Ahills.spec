@@ -1,6 +1,6 @@
 [spec]
 
-options = "+Freeciv-3.1-spec"
+options = "+Freeciv-3.2-spec"
 
 [info]
 

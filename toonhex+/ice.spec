@@ -3,7 +3,7 @@
 
 ; Format and options of this spec file:
 options = "+Freeciv-3.1-spec"
-
+;discontinued, will be removed
 [info]
 
 artists = "

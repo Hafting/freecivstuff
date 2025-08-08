@@ -8,10 +8,35 @@ maps. A long hill don't need to end merely because it runs into a
 desert or glacier area.  The volcanoes look nice, and
 present a difficulty by not allowing roads.
 
+Sea may have pack ice in the arctic regions. Ships slow down in ice.
+Some of the shallow sea may be rough, with reefs and such.  This
+slows down ships.  Players may build sea marks to regain shipping speed.
+
 The terrain may have big rivers. Unlike normal rivers, the big rivers
 lets ships move on them.
 
 Except for extra terrain, these rules are a copy of civ2civ3.
+buildings.ruleset   unchanged
+cities.ruleset      unchanged
+effects.ruleset     volcanoes are mountains, so vision & movement effects
+game.ruleset        unchanged
+government.ruleset  unchanged
+nations.ruleset     unchanged
+*.lua               unchanged
+styles.ruleset      unchanged
+techs.ruleset       unchanged
+
+terrain.ruleset     Extra terrain types:
+                     * Hills with desert/arctic/tundra/forest/jungle
+                     * Sea with pack ice, rough shallow sea
+                     * Big rivers that allow all ships
+                    3x move cost for land tiles & rivers, so ships with
+                    "TerrainSpeed" won't get super fast on rivers
+                    
+units.ruleset       3x move points for land units, compensates for 3x cost
+                    "TerrainSpeed" for trireme and ships, so pack ice and
+                    rough coasts slows shipping
+
 Remaining text from README.civ2civ3 describes the game:
 
 OBJECTIVES:

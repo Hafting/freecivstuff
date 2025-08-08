@@ -2,7 +2,7 @@
 [spec]
 
 ; Format and options of this spec file:
-options = "+Freeciv-3.1-spec"
+options = "+Freeciv-3.2-spec"
 
 [info]
 
@@ -52,6 +52,7 @@ tiles = { "row", "column","tag"
   0,    4,  "t.l0.arctic1"			;[?]
   0,    4,  "t.l0.Ahills1"      ;[HH]
   0,    5,  "t.l0.swamp1"			;{PA}
+
   0,    7,  "t.l0.coast1"			;[PA][GS]
 	0,    7,  "t.l0.icecoast1"  ;[HH]
   5,    6,  "t.l0.inaccessible1"	;[?][GS]
@@ -121,7 +122,7 @@ tiles = { "row", "column","tag"
 
 ;misc
  5, 5, "mask.tile"
- 5, 1, "t.dither_tile"										
+ 5, 1, "t.dither_tile"
  5, 1, "tx.darkness"										;[DS][?][GS]
  0, 0, "t.coast_color"										;[?]
 ; 0, 0, "t.floor_color"										;[?]
@@ -145,6 +146,7 @@ tiles = { "row", "column","tag"
  6, 2, "path.normal"          ; tip of path with MP remaining
  6, 3, "path.waypoint"
 
+ 6, 4, "tx.nets"
 ; Irrigation (as special type), and whether north, south, east, west 
 
  4,  3, "tx.irrigation_s_n0e0se0s0w0nw0"
