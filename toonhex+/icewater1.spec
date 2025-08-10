@@ -14,7 +14,9 @@ artists = "
 "
 
 [file]
-gfx = "toonhex+/icewater1"
+;gfx = "toonhex+/icewater1"
+gfx = "hexemplio/water1"
+;Layer 0 and 1 of icy seas, are the same as for normal sea. Ice graphics are in layer 2, see packice.spec
 
 [grid_main]
 

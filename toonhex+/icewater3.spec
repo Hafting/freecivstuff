@@ -12,9 +12,9 @@ artists = "
 "
 
 [file]
-;We aren't using anything ice specific, should revert to hexemplio/water3 here.
-;No need to carry the extra .png ...
-gfx = "toonhex+/icewater3"
+gfx = "hexemplio/water3"
+;Layers 0 and 1 of icy sea are the same as for normal sea. No new gfx here
+;Ice is in layer 2, see packice.spec
 
 [grid_main]
 
