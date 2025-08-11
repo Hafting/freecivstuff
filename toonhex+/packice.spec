@@ -11,7 +11,7 @@ artists = "
 "
 
 [file]
-gfx = "toonhex+/icedev"
+gfx = "toonhex+/ice"
 
 
 [grid_main]
