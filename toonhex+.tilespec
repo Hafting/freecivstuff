@@ -449,9 +449,10 @@ layer1_match_type = "land"
 [tile_tundra]
 tag = "tundra"
 blend_layer = 1
-num_layers = 2
+num_layers = 3
 layer0_match_type = "lake"
 layer1_match_type = "land"
+layer2_match_type = "ice"
 
 [extras]
 styles =
