@@ -13,6 +13,9 @@ name = "Toonhex+"
 ; F "Forested hill"
 ; J "jungle hill"
 ; v "volcano"
+; _ "shallow sea with pack ice"
+; ; "deep sea with pack ice"
+; - "lake with ice"
 ; Toonhex based on hexemplio, which in turn is based on
 ; amplio2hexgbig by GriffonSpade
 
@@ -268,6 +271,20 @@ layer1_match_type = "water"
 layer1_match_with = "water"
 layer1_sprite_type = "corner"
 
+[tile_icelake]
+tag = "icelake"
+blend_layer = 2
+num_layers = 3
+layer0_match_type = "lake"
+layer0_match_with = "lake"
+layer0_sprite_type = "corner"
+layer1_match_type = "water"
+layer1_match_with = "water"
+layer1_sprite_type = "corner"
+layer2_match_type = "ice"
+layer2_match_with = "ice"
+
+
 [tile_coast]
 tag = "coast"
 blend_layer = 2
@@ -300,6 +317,21 @@ layer0_sprite_type = "corner"
 layer1_match_type = "water"
 layer1_match_with = "water"
 layer1_sprite_type = "corner"
+
+
+[tile_icefloor]
+;Deep sea with pack ice on top
+tag = "icefloor"
+blend_layer = 2
+num_layers = 3
+layer0_match_type = "floor"
+layer0_match_with = "floor"
+layer0_sprite_type = "corner"
+layer1_match_type = "water"
+layer1_match_with = "water"
+layer1_sprite_type = "corner"
+layer2_match_type = "ice"
+layer2_match_with = "ice"
 
 [tile_inaccessible]
 tag = "inaccessible"

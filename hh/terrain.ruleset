@@ -264,6 +264,57 @@ helptext             = _("\
 No unit can enter this terrain, nor can any city work its tiles.\
 ")
 
+[terrain_icy_lake]
+name                 = _("Icy lake")
+graphic              = "icelake"
+graphic_alt          = "icecoast"
+graphic_alt2         = "-"
+identifier           = "-"
+class                = "Oceanic"
+movement_cost        = 3
+defense_bonus        = 0
+food                 = 2
+shield               = 0
+trade                = 1
+resources            = "Fish"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 0
+base_time            = 1
+road_time            = 0
+cultivate_result     = "no"
+cultivate_time       = 0
+plant_result         = "no"
+plant_time           = 0
+irrigation_food_incr = 0
+irrigation_time      = 0
+mining_shield_incr   = 0
+mining_time          = 0
+transform_result     = "Tundra"
+transform_time       = 36
+placing_time         = 0
+pillage_time         = 1
+extra_settings       =
+    { "extra", "removal_time"
+      "Pollution", 3
+      "Fallout",   3
+    }
+animal               = "None"
+warmer_wetter_result = "Lake"
+warmer_drier_result  = "no"
+cooler_wetter_result = "Glacier"
+cooler_drier_result  = "no"
+native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
+flags                = "NoCities", "NoBarbs", "NoPollution", "FreshWater", "NoZoc", "NoFortify", "Frozen"
+property_ocean_depth = 0
+color.r              = 46
+color.g              = 120
+color.b              = 182
+helptext             = _("\
+Lakes are substantial bodies of fresh water. Ice makes for slower shipping\
+")
+
+
 [terrain_lake]
 name                 = _("Lake")
 graphic              = "lake"
@@ -302,8 +353,8 @@ extra_settings       =
 animal               = "None"
 warmer_wetter_result = "Swamp"
 warmer_drier_result  = "no"
-cooler_wetter_result = "Glacier"
-cooler_drier_result  = "no"
+cooler_wetter_result = "Icy lake"
+cooler_drier_result  = "Icy lake"
 native_to            = "Sea", "Air", "Missile", "Helicopter", "Trireme"
 flags                = "NoCities", "NoBarbs", "NoPollution", "FreshWater", "NoZoc", "NoFortify"
 property_ocean_depth = 0
@@ -456,8 +507,8 @@ extra_settings       =
 animal               = "Storm"
 warmer_wetter_result = "no"
 warmer_drier_result  = "no"
-cooler_wetter_result = "no"
-cooler_drier_result  = "no"
+cooler_wetter_result = "Icy deep ocean"
+cooler_drier_result  = "Icy deep ocean"
 native_to            = "Sea", "Air", "Missile", "Helicopter"
 flags                = "NoCities", "NoPollution", "UnsafeCoast", "NoZoc", "NoFortify", "Sea"
 property_ocean_depth = 70
@@ -468,6 +519,60 @@ helptext             = _("\
 Deep oceans cover much of the world away from coastlines, and only\
  seaworthy units (not including Triremes) can travel on them.\
 ")
+
+[terrain_icy_deep_ocean]
+name                 = _("Icy deep Ocean")
+graphic              = "icefloor"
+graphic_alt          = "icecoast"
+graphic_alt2         = "-"
+identifier           = ";"
+class                = "Oceanic"
+movement_cost        = 3
+defense_bonus        = 0
+food                 = 1
+shield               = 0
+trade                = 1
+;resources            = "none"
+road_food_incr_pct   = 0
+road_shield_incr_pct = 0
+road_trade_incr_pct  = 0
+base_time            = 1
+road_time            = 0
+cultivate_result     = "no"
+cultivate_time       = 0
+plant_result         = "no"
+plant_time           = 0
+irrigation_food_incr = 0
+irrigation_time      = 0
+mining_shield_incr   = 0
+mining_time          = 10
+transform_result     = "no"
+transform_time       = 0
+placing_time         = 0
+pillage_time         = 1
+extra_settings       =
+    { "extra", "removal_time"
+      "Pollution", 3
+      "Fallout",   3
+    }
+animal               = "Storm"
+warmer_wetter_result = "Deep ocean"
+warmer_drier_result  = "Deep ocean"
+cooler_wetter_result = "no"
+cooler_drier_result  = "no"
+native_to            = "Sea", "Air", "Missile", "Helicopter"
+flags                = "NoCities", "NoPollution", "UnsafeCoast", "NoZoc", "NoFortify", "Sea", "Frozen"
+property_ocean_depth = 70
+color.r              = 0
+color.g              = 33
+color.b              = 129
+helptext             = _("\
+Deep oceans cover much of the world away from coastlines, and only\
+ seaworthy units (not including Triremes) can travel on them. \
+ Ice makes for slower shipping.\
+")
+
+
 
 [terrain_glacier]
 name                 = _("Glacier")

@@ -72,6 +72,7 @@ tiles = { "row", "column","tag"
   5,    0,  "t.l1.jungle1"
   5,    0,  "t.l1.forest1"
   5,    0,  "t.l1.inaccessible1"
+	5,    0,  "t.l1.icelake1"
 
 ; Terrain special resources:
  1,   0, "ts.oil"											;[?]
@@ -132,7 +133,9 @@ tiles = { "row", "column","tag"
  5, 0, "t.blend.icecoast"
  5, 0, "t.blend.ocean"
  5, 0, "t.blend.floor"
+ 5, 0, "t.blend.icefloor"
  5, 0, "t.blend.lake"
+ 5, 0, "t.blend.icelake"
  0, 4, "t.blend.arctic"										;[?]
  5, 3, "user.attention"                                                                         ;[GS]
  5, 4, "tx.fog"
