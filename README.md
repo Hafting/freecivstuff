@@ -2,18 +2,18 @@
 Tileset &amp; ruleset for freeciv
 ![alt text](img/freecivstuff.png "Freeciv ")
 
-This repository is for playing freeciv with more terrain types. Such as "arctic hills" and "desert hills".  This gives more opportunities for nice looking terrains, as it is now possible to have a hill in a desert or polar region - without getting an unrealistic green hill there. A green hill is not merely a bad fit visually, it also ruins the gameplay by providing too nice terrain in an otherwise barren region. 
+This repository is for playing freeciv with more terrain types. Such as "arctic hills", "desert hills", big rivers and sea ice.  This gives more opportunities for nice looking terrains, as it is now possible to have a hill in a desert or polar region - without getting an unrealistic green hill there. A green hill is not merely a bad fit visually, it also ruins the gameplay by providing too nice terrain in an otherwise barren region. 
 
 Having more terrain types makes a custom ruleset necessary, as the ruleset specifies the terrain types.  The custom ruleset here is the civ2civ3 rules, with more terrain added.
 
-The extra terrain types is supported by the terrain generator in freeciv 3.1  They are also supported by my ["tergen"](https://github.com/Hafting/tergen) terrain generator. The terrain graphics is based on the toonhex tileset, and is therefore named toonhex+.
+The extra terrain types is supported by the terrain generator in freeciv 3.2  They are also supported by my ["tergen"](https://github.com/Hafting/tergen) terrain generator. The terrain graphics is based on the toonhex tileset, and is therefore named toonhex+.
 
 To use this, copy the files and folders into your freeciv folder. Such as /usr/share/freeciv/ on Linux.
 
 There are two ways to specify the toonhex+ tileset. Those using the command line, can start the game like this:
 freeciv-gtk3 -t toonhex+
 
-Those preferring GUI solutions, start freeciv and open "client settings". Select graphics, and set tileset(Iso-Hex) to "toonhex+"
+Those preferring GUI solutions, start freeciv and open "client settings". Select graphics, and set tileset(Iso-Hex) to "toonhex+". Selecting the "hh" ruleset should also work.
 
 Either way, start a game and choose the "hh" ruleset. You will get these extra terrain tiles:
 - desert hills
@@ -23,6 +23,7 @@ Either way, start a game and choose the "hh" ruleset. You will get these extra t
 - jungle hills
 - volcanoes
 - big rivers
+- optional ice on sea, deep sea and lakes
 
 ## Hills and volcanoes
 
@@ -38,3 +39,6 @@ The big lake has a big river to the sea. The big river has a couple of small sid
 The well-known freeciv river, is the "small" river.  Small rivers admit triremes, but not the bigger ships.
 
 Big rivers are visually bigger. These rivers allow all ships, making some lakes and inland cities reachable by ship. 
+
+## Pack ice
+![Pack ice at the north pole](img/polarice.png)Water in polar regions may have ice floating on top.  Ice is a danger to ships, so ships will move at 1/3 of their normal speed in icy waters. The image shows pack ice floating on shallow and deep water, as well as some tundra and glacier tiles.
