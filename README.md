@@ -41,4 +41,6 @@ The well-known freeciv river, is the "small" river.  Small rivers admit triremes
 Big rivers are visually bigger. These rivers allow all ships, making some lakes and inland cities reachable by ship. 
 
 ## Pack ice
-![Pack ice at the north pole](img/polarice.png)Water in polar regions may have ice floating on top.  Ice is a danger to ships, so ships will move at 1/3 of their normal speed in icy waters. The image shows pack ice floating on shallow and deep water, as well as some tundra and glacier tiles.
+![Pack ice at the north pole](img/polarice.png)
+	
+Water in polar regions may have ice floating on top.  Ice is a danger to ships, so ships will move at 1/3 of their normal speed in icy waters. The image shows pack ice floating on shallow and deep water, as well as some tundra and glacier tiles.
